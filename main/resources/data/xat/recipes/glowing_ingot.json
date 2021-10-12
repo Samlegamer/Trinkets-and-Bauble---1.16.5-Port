@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#B#",
+        "BiB",
+        "#B#"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:glowstone_dust"
+        },
+        "B": {
+            "item": "minecraft:blaze_powder"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    "result": {
+        "item": "xat:glowing_ingot",
+        "count": 1
+    }
+}
