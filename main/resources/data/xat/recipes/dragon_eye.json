@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#DC",
+        "DBD",
+        "CDC"
+    ],
+    "key": {
+        "#": {
+            "item": "xat:glowing_ring"
+        },
+        "D": {
+            "item": "minecraft:diamond_sword"
+        },
+        "C": {
+            "item": "xat:glowing_gem"
+        },
+        "B": {
+            "item": "minecraft:dragon_head"
+        }
+    },
+    "result": {
+        "item": "xat:dragon_eye",
+        "count": 1
+    }
+}

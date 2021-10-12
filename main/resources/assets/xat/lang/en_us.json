@@ -1,0 +1,23 @@
+{ 
+	"item.xat.glowing_ingot": "Glowing Ingot",
+	"item.xat.glowing_dust": "Glowing Dust",
+	"item.xat.glowing_gem": "§eGlowing Gem",
+	"item.xat.glowing_ring": "§eGlowing Ring",
+	"item.xat.dragon_eye": "Dragon's Eye",
+	"item.xat.damage_shield": "§6Damage Shield",
+	"item.xat.poison_stone": "§2Poison Stone",
+	"item.xat.wither_ring": "§8Wither Ring",
+	
+	
+	
+	"item.xat.glowing_ring.desc": "Give Night Vision",
+	"item.xat.dragon_eye.desc": "Gives immunity to fire",
+	"item.xat.dragon_eye.desc1": "Fireproof",
+	"item.xat.poison_stone.desc": "Immune to poison and hunger",
+	"item.xat.wither_ring.desc": "Immune to wither and nausea",
+	
+	"key.categories.xat": "Trinkets and Baubles",
+	"key.xat.dragon_eye_night_vision": "Dragons Eye - Night Vision Ability",
+	
+	"itemGroup.xat_tab_items": "Trinkets and Baubles: Items"
+}
