@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#B#",
+        "BiB",
+        "#B#"
+    ],
+    "key": {
+        "#": {
+            "item": "xat:glowing_dust"
+        },
+        "B": {
+            "item": "xat:glowing_ingot"
+        },
+        "i": {
+            "item": "minecraft:diamond_block"
+        }
+    },
+    "result": {
+        "item": "xat:glowing_gem",
+        "count": 1
+    }
+}

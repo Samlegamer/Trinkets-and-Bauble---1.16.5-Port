@@ -1,0 +1,29 @@
+{
+	"item.xat.glowing_powder": "Glowing Powder",
+	"item.xat.glowing_ingot": "§eGlowing Ingot",
+	"item.xat.glowing_gem": "§6Glowing Gem",
+	"item.xat.glowing_ring": "§eGlowing Ring",
+	"item.xat.dragon_eye": "Dragon's Eye",
+	"item.xat.damage_shield": "§6Damage Shield",
+	"item.xat.poison_stone": "§2Poison Stone",
+	"item.xat.wither_ring": "§8Wither Ring",
+	"item.xat.teddy_bear": "Teddy Bear",	
+	"item.xat.weightless_stone": "Weightless Stone",	
+	
+	
+	
+	"item.xat.glowing_ring.desc": "Give Night Vision",
+	"item.xat.dragon_eye.desc": "Gives immunity to fire",
+	"item.xat.dragon_eye.desc1": "Fireproof",
+	"item.xat.poison_stone.desc": "Immune to poison and hunger",
+	"item.xat.wither_ring.desc": "Immune to wither and nausea",
+	"item.xat.glowing_powder.desc": "Tier 1 Crafting Material",	
+	"item.xat.glowing_ingot.desc": "Tier 2 Crafting Material",
+	"item.xat.glowing_gem.desc": "Tier 3 Crafting Material",
+		
+	"key.categories.xat": "Trinkets and Baubles",
+	"key.xat.dragon_eye_night_vision": "Dragons Eye - Night Vision ON",
+	"key.xat.dragon_eye_night_vision_off": "Dragons Eye - Night Vision OFF",
+	
+	"itemGroup.xat_tab_items": "Trinkets and Baubles: Items"
+}
