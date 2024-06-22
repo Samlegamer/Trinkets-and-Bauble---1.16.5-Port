@@ -1,21 +1,19 @@
 package fr.samlegamer.xat.items;
 
-import com.mojang.blaze3d.platform.GlStateManager;
-
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.PlayerRenderer;
-import net.minecraft.client.renderer.model.ItemCameraTransforms;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
+/*
+ * Missing :
+ * Render 
+ * compat with enhanced visual
+ */
 public class DamageShieldItem extends Item implements ICurioItem
 {	
 	public DamageShieldItem(Properties props)
@@ -62,15 +60,31 @@ public class DamageShieldItem extends Item implements ICurioItem
 		return tagCompound;
 	}*/
     
-    
+    /*
+    @Override
+    @OnlyIn(Dist.CLIENT)
+    public void render(String identifier, int index, MatrixStack matrixStack, IRenderTypeBuffer renderTypeBuffer, int light, LivingEntity livingEntity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch, ItemStack stack)
+    {
+    	IRendersAsItem render = new IRendersAsItem() {
+			
+			@Override
+			public ItemStack getItem() {
+				// TODO Auto-generated method stub
+				return new ItemStack(XATItemsRegistry.DAMAGE_SHIELD.get());
+			}
+		};
+    	ICurioItem.super.render(identifier, index, matrixStack, renderTypeBuffer, light, livingEntity, limbSwing,
+    			limbSwingAmount, partialTicks, ageInTicks, netHeadYaw, headPitch, stack);
+    }
     
     @SuppressWarnings({ "deprecation", "null" })
 	@OnlyIn(Dist.CLIENT)
     @Override
     public boolean canRender(String identifier, int index, LivingEntity livingEntity, ItemStack stack)
     {
-		//ModelResourceLocation normal = new ModelResourceLocation(this.getRegistryName().toString(), "inventory");
+		ModelResourceLocation normal = new ModelResourceLocation(this.getRegistryName().toString(), "inventory");
 
+		ModelLoader.setCustomMeshDefinition(this, new ItemMeshDefinition();
 		float offsetX = 0.17F;
 		float offsetY = 0.22F;
 		float offsetZ = 0.16F;
@@ -91,5 +105,5 @@ public class DamageShieldItem extends Item implements ICurioItem
 
     	
 		return false;
-    }
+    }*/
 }

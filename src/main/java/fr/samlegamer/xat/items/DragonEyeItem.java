@@ -20,15 +20,12 @@ import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 
 public class DragonEyeItem extends Item implements ICurioItem
-{	
-	public XATKeys keysXat;
-	
+{		
 	public DragonEyeItem(Properties props)
 	{
 		super(props.rarity(Rarity.RARE));
 	}
 	
-	@SuppressWarnings("static-access")
 	@Override
 	public void curioTick(String identifier, int index, LivingEntity livingEntity, ItemStack stack)
 	{
@@ -44,29 +41,30 @@ public class DragonEyeItem extends Item implements ICurioItem
         	livingEntity.clearFire();
         }
         
-		if(keysXat.DRAGON_EYE_NIGHT_VISION_ON.consumeClick())
+		if(XATKeys.DRAGON_EYE_NIGHT_VISION_ON.consumeClick())
 		{
 			EffectInstance effect = new EffectInstance(Effects.NIGHT_VISION, Integer.MAX_VALUE, 0, false, false);
             livingEntity.addEffect(effect);
 		}
-		else if(keysXat.DRAGON_EYE_NIGHT_VISION_ON.consumeClick() && livingEntity.hasEffect(Effects.NIGHT_VISION))
+		else if(XATKeys.DRAGON_EYE_NIGHT_VISION_OFF.consumeClick() && livingEntity.hasEffect(Effects.NIGHT_VISION))
 		{
 			livingEntity.removeEffect(Effects.NIGHT_VISION);
 		}
 	}
 	
+	@Override
+	public void onUnequip(SlotContext slotContext, ItemStack newStack, ItemStack stack)
+	{
+		slotContext.getWearer().removeEffect(Effects.FIRE_RESISTANCE);
+		slotContext.getWearer().removeEffect(Effects.NIGHT_VISION);
+	}
+	/*
     @Override
     public boolean canUnequip(String identifier, LivingEntity livingEntity, ItemStack stack)
     {
     	return livingEntity.removeEffect(Effects.FIRE_RESISTANCE) && livingEntity.removeEffect(Effects.NIGHT_VISION);
-    }
-    
-    @Override
-    public boolean canEquipFromUse(SlotContext slotContext, ItemStack stack)
-    {
-        return true;
-    }
-    
+    }*/
+        
     @Override
 	public void appendHoverText(ItemStack p_77624_1_, @Nullable World p_77624_2_, List<ITextComponent> tooltip, ITooltipFlag p_77624_4_)
 	{

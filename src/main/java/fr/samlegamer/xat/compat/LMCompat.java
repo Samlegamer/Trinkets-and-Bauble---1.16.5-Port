@@ -3,10 +3,15 @@ package fr.samlegamer.xat.compat;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.Potion;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.Registry;
 import net.minecraftforge.fml.ModList;
 
 public class LMCompat
-{	
+{
+	//public static final RegistryObject<Effect> growing = RegistryObject.of(new ResourceLocation("sizeshiftingpotions:growing"), ForgeRegistries.);
+	
+	
 	private static final String paralysis = "paralysis";
 	private static final String penetration = "penetration";
 	private static final String weight = "weight";
@@ -111,18 +116,15 @@ public class LMCompat
 		// Good Effect
 		removeEffect(entity, repulsion);
 	}
-	
+
 	public static void removeEffect(LivingEntity entity, String name)
 	{
+		final Effect effect = Registry.MOB_EFFECT.get(new ResourceLocation("lycanitesmobs", name));;
 		if(ModList.get().isLoaded("lycanitesmobs"))
 		{
-			try {
-				Potion effect = Potion.byName("lycanitesmobs:" + name);
-				if ((effect != null) && entity.hasEffect((Effect) effect.getEffects())) {
-					entity.removeEffect((Effect) effect.getEffects());
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
+			if(entity.hasEffect(effect))
+			{
+				entity.removeEffect(effect);
 			}
 		}
 	}
